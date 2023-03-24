@@ -13,6 +13,7 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="Css/style.css">
+
 </head>
 <body>
     <!-- Header design -->
@@ -24,7 +25,7 @@
         <nav class="navbar">
             <a href="Index.html" class="ativo">Home</a>
             <a href="#sobre">Sobre mim</a>
-            <a href="#serviços">Serviços</a>
+            <a href="#services">Serviços</a>
             <a href="#portfolio">Portfólio</a>
             <a href="#contato">Contato</a>
         </nav>
@@ -45,7 +46,7 @@
                 <a href="#"> <i class='redes bx bxl-instagram' ></i> </a>
                 <a href="#"> <i class='redes bx bxl-linkedin-square' ></i></a>
             </div>
-            <a href="#" class="btn-download"><i class='bx bx-link'></i>Download CV</a> 
+            <a href="#" class="btn-download"><i class='bx bx-link' id="dwl-link"></i>Download CV</a> 
         </div>
 
         <div class="home-img">
@@ -72,10 +73,70 @@
         
     </section>
 
+<!-- Design seção Serviços  -->
 
+    <section class="services" id="services">
+        <h2 class="heading"> Meus <span>Serviços</span></h2>
+
+        <div class="services-container">
+            <div class="services-box" id="sb1">
+                <i class='bx bx-code-alt'></i>
+                <h3>Desenvolvimento Web</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus esse id corrupti nisi qui, perferendis voluptatum tenetur cumque quaerat quam.</p>
+                <a href="#" class="btn-leia services-btn">Leia mais</a>
+            </div>
+
+            <div class="services-box" id="sb2">
+                <i class='bx bxs-wrench'></i>
+                <h3>Manutenção de Computadores</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus esse id corrupti nisi qui, perferendis voluptatum tenetur cumque quaerat quam.</p>
+                <a href="#" class="btn-leia services-btn">Leia mais</a>
+            </div>
+
+            <div class="services-box" id="sb3">
+                <i class='bx bx-meteor'></i>
+                <h3>Otimização de Computadores</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus esse id corrupti nisi qui, perferendis voluptatum tenetur cumque quaerat quam.</p>
+                <a href="#" class="btn-leia services-btn">Leia mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Design seção Portfolio-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Portfólio</h2>
+        <div class="portfolio-box" id="pb1">
+            <div class="portfolio-layer">
+                <h4> Web Design</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, et!<a href="https://raysidney.github.io/html-css/Projetos/02siteandroid/index.html"><i class='bx bx-link-external' ></i></a></p>
+            </div>
+
+            <div class="pbimg" id="pbimg1">
+                <img src="Imagens/portfolio1.png" alt="Android" id="android">
+            </div>
+
+        </div>
+
+        <div class="portfolio-box" id="pb2">
+            <div class="portfolio-layer">
+                <h4>Otimização com fogo em games</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea illo placeat, eveniet odit animi excepturi?</p>
+            </div>
+
+            <div class="pbimg" id="pbimg2">
+                <img src="Imagens/fps1.jpg" alt="Otimização1" id="fps1">
+                <img src="Imagens/fps2.jpg" alt="Otimização2" id="fps2">
+            </div>
+        </div>
+
+    </section>
+
+    
 
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js">
+
+    </script>
 </body>
 
 </html>
