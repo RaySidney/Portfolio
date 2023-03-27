@@ -82,19 +82,22 @@ section{
     color: var(--text-color);
     display: none;
 }
-.home{
+.home {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     padding: 10em 5% 2em;
+    flex-direction: column;
+    justify-content: center;
 }
 #homephoto{
     border-radius: 50%;
     width: 33vw;
     transition: 1s ease;
     box-shadow: 0 0 1em var(--main-color);
+    padding: 1em;
+    margin: .5em;
 }
+
 #homephoto:hover{
     box-shadow: 0 0 1.5em var(--main-color);
     transform: scale(1.1);
@@ -174,18 +177,15 @@ i.redes{
     border-radius: 1.5em;
     box-shadow: 0 0 1em var(--main-color);
     background: var(--main-color);
-    
+    color: var(--bg-color);
     width: 60%;
     margin: auto;
-    transition: 1s ease;
-
-}
-.btn-download p{
-    color: var(--bg-color);
-    font-size: 65%;    
+    transition: 1s ease;    
+    font-size: 80%;    
     letter-spacing: .2em;
     font-weight: 600;
 }
+
 .btn-download:hover{
     box-shadow: none;
 }
@@ -264,21 +264,7 @@ i.redes{
 .lista-item li:hover, .lista-item h4:hover{
     transform: scale(1.2);
 }
-/* #li1{
-    width: 25%;
-}
 
-#li2{
-    width: 25%;
-}
-
-#li3{
-    width: 25%;
-}
-
-#li4{
-    width: 25%;
-} */
 .btn-leia{
     display: flex;
     align-items: center;
@@ -289,7 +275,7 @@ i.redes{
     background: var(--main-color);
     color: var(--bg-color);
     width: 30%;
-    margin: auto;
+    margin: 1em auto;
     transition: 1s ease;
     letter-spacing: .1em;
     font-weight: 600;
@@ -368,6 +354,21 @@ i.redes{
     align-items: center;
     flex-direction: column;
 }
+
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+}
+.frame iframe{
+    width: 90%;
+    height: 100%;
+    border: 0.1em solid var(--main-color);
+    
+}
+
 #pbimg2{
     display: flex;
     flex: 1 1 1em;
@@ -379,12 +380,92 @@ i.redes{
     border: .1em white solid;
     border-radius: 10px;
 }
-#android{
-    width: 70%;
-}
 #fps1{
     width: 45%;
 }
 #fps2{
     width: 45%;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .home {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 9em 5% 2em;
+        flex-direction: row-reverse;
+    }
+    #homephoto{
+        margin: 0 10%;
+    }
+    .home-content h3 {
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .home-content h1 {
+        text-align: left;
+        font-size: 2.5em;
+    }
+    .redes-socias {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .redebutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lista{
+        display: flex;
+        flex-direction: row;
+    }
+    .lista-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;   
+        height: 20vh;
+    }
+    .services-container {
+        font-size: 0.9em;
+        display: flex;
+        gap: 1em;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .services-container .services-box {
+        display: flex;
+        height: 50vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .services-box:hover {
+        transform: scale(1.04);
+
+    }
+
+    .frame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: -5%;
+        
+        
+    
+    }
+    .frame iframe{
+        width: 70%;
+        height: 70%;
+        border: 0.1em solid var(--main-color);
+        
+    }
 }
