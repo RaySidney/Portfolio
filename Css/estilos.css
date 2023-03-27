@@ -11,6 +11,7 @@
     font-family: 'Roboto Slab', serif;
     color: var(--text-color);
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 
@@ -83,9 +84,10 @@ section{
 }
 .home{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 9em 5% 2em;
+    padding: 10em 5% 2em;
 }
 #homephoto{
     border-radius: 50%;
@@ -97,10 +99,8 @@ section{
     box-shadow: 0 0 1.5em var(--main-color);
     transform: scale(1.1);
 }
-.home-content{
-    margin-right: 5%;
-}
 .home-content h3{
+    text-align: center;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -108,6 +108,7 @@ section{
     margin-bottom:.5em;
 }
 .home-content h1{
+    text-align: center;
     font-size: 2.5em;
 }
 span{
@@ -116,6 +117,11 @@ span{
 .home-content p{
     font-size: 1em;
     text-align: justify;
+}
+.redes-socias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .redes-socias a{
     display: inline-flex;
@@ -168,14 +174,18 @@ i.redes{
     border-radius: 1.5em;
     box-shadow: 0 0 1em var(--main-color);
     background: var(--main-color);
-    color: var(--bg-color);
-    width: 20vw;
+    
+    width: 60%;
     margin: auto;
     transition: 1s ease;
+
+}
+.btn-download p{
+    color: var(--bg-color);
+    font-size: 65%;    
     letter-spacing: .2em;
     font-weight: 600;
 }
-
 .btn-download:hover{
     box-shadow: none;
 }
@@ -185,6 +195,7 @@ i.redes{
     background: var(--secbg-color);
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 .about-img{
     display: inline-flex;
@@ -196,12 +207,16 @@ i.redes{
     box-shadow: 0 0 0.5em var(--main-color);
     border-radius: 1em;
     width: 40%;
+    margin: 5%;
     
 }
 
 .heading{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.9em;
+}
+.about-content{
+    width: 80%;
 }
 .about-content p{
     text-align: justify;
@@ -222,15 +237,19 @@ i.redes{
 
 }
 .lista{
-display: flex;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 .lista-item{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
-    border: 0.1rem solid white;
     justify-content: center;
     align-items: center;
-    margin: 0rem 1rem 1rem;
+    margin: 0.5em 1rem;
+    width: 80%;
+    border: 0.1em solid white;
 }
 .lista-item h4{
     font-weight: 700;
@@ -245,7 +264,7 @@ display: flex;
 .lista-item li:hover, .lista-item h4:hover{
     transform: scale(1.2);
 }
-#li1{
+/* #li1{
     width: 25%;
 }
 
@@ -259,7 +278,7 @@ display: flex;
 
 #li4{
     width: 25%;
-}
+} */
 .btn-leia{
     display: flex;
     align-items: center;
@@ -269,7 +288,7 @@ display: flex;
     box-shadow: 0 0 .7em var(--main-color);
     background: var(--main-color);
     color: var(--bg-color);
-    width: 10vw;
+    width: 30%;
     margin: auto;
     transition: 1s ease;
     letter-spacing: .1em;
@@ -288,21 +307,23 @@ display: flex;
 .services-container{
     font-size: 0.9em;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 1em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.services-container .services-box{
-    flex: 1 1 1em;
+.services-box{
     background-color: var(--secbg-color);
     padding: 1.5em 1em 2em;
     border-radius: 1em;
     text-align: center;
     border: .1em solid var(--bg-color);
     transition: 1s ease;
-    height: 50vh;
+    height: 60%;
+    overflow: hidden;
 }
 
 .services-box:hover{
@@ -338,7 +359,7 @@ display: flex;
 }
 .portfolio{
     background-color: var(--secbg-color);
-    padding: 7em 0% 2em;
+    padding: 7em 5% 2em;
 }
 .portfolio-layer{
     display: flex;
