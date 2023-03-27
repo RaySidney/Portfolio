@@ -11,6 +11,7 @@
     font-family: 'Roboto Slab', serif;
     color: var(--text-color);
     scroll-behavior: smooth;
+    user-select: none;
 }
 
 
@@ -81,26 +82,28 @@ section{
     color: var(--text-color);
     display: none;
 }
-.home{
+.home {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 9em 5% 2em;
+    padding: 10em 5% 2em;
+    flex-direction: column;
+    justify-content: center;
 }
 #homephoto{
     border-radius: 50%;
     width: 33vw;
     transition: 1s ease;
     box-shadow: 0 0 1em var(--main-color);
+    padding: 1em;
+    margin: .5em;
 }
+
 #homephoto:hover{
     box-shadow: 0 0 1.5em var(--main-color);
     transform: scale(1.1);
 }
-.home-content{
-    margin-right: 5%;
-}
 .home-content h3{
+    text-align: center;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -108,6 +111,7 @@ section{
     margin-bottom:.5em;
 }
 .home-content h1{
+    text-align: center;
     font-size: 2.5em;
 }
 span{
@@ -115,6 +119,12 @@ span{
 }
 .home-content p{
     font-size: 1em;
+    text-align: justify;
+}
+.redes-socias{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .redes-socias a{
     display: inline-flex;
@@ -168,9 +178,10 @@ i.redes{
     box-shadow: 0 0 1em var(--main-color);
     background: var(--main-color);
     color: var(--bg-color);
-    width: 20vw;
+    width: 60%;
     margin: auto;
-    transition: 1s ease;
+    transition: 1s ease;    
+    font-size: 80%;    
     letter-spacing: .2em;
     font-weight: 600;
 }
@@ -184,6 +195,7 @@ i.redes{
     background: var(--secbg-color);
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 .about-img{
     display: inline-flex;
@@ -195,12 +207,16 @@ i.redes{
     box-shadow: 0 0 0.5em var(--main-color);
     border-radius: 1em;
     width: 40%;
+    margin: 5%;
     
 }
 
 .heading{
     text-align: center;
-    font-size: 3em;
+    font-size: 2.9em;
+}
+.about-content{
+    width: 80%;
 }
 .about-content p{
     text-align: justify;
@@ -220,6 +236,34 @@ i.redes{
     margin:0.9em 0 1.4em;
 
 }
+.lista{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+.lista-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 1rem;
+    width: 80%;
+    border: 0.1em solid white;
+}
+.lista-item h4{
+    font-weight: 700;
+    transition: .5s ease-out;
+}
+.lista-item li{
+    font-size: .8em;
+    font-weight: 200;
+    list-style-type: none;
+    transition: .5s ease-out;
+}
+.lista-item li:hover, .lista-item h4:hover{
+    transform: scale(1.2);
+}
 
 .btn-leia{
     display: flex;
@@ -230,8 +274,8 @@ i.redes{
     box-shadow: 0 0 .7em var(--main-color);
     background: var(--main-color);
     color: var(--bg-color);
-    width: 10vw;
-    margin: auto;
+    width: 30%;
+    margin: 1em auto;
     transition: 1s ease;
     letter-spacing: .1em;
     font-weight: 600;
@@ -249,21 +293,23 @@ i.redes{
 .services-container{
     font-size: 0.9em;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-wrap: wrap;
     gap: 1em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
-.services-container .services-box{
-    flex: 1 1 1em;
+.services-box{
     background-color: var(--secbg-color);
     padding: 1.5em 1em 2em;
     border-radius: 1em;
     text-align: center;
     border: .1em solid var(--bg-color);
     transition: 1s ease;
-    
+    height: 60%;
+    overflow: hidden;
 }
 
 .services-box:hover{
@@ -288,6 +334,7 @@ i.redes{
 }
 .services-container .services-box p{
     margin: .5em 0 1em;
+    
 } 
 .pbimg{
     display: flex;
@@ -298,7 +345,7 @@ i.redes{
 }
 .portfolio{
     background-color: var(--secbg-color);
-    padding: 7em 0% 2em;
+    padding: 7em 5% 2em;
 }
 .portfolio-layer{
     display: flex;
@@ -307,6 +354,21 @@ i.redes{
     align-items: center;
     flex-direction: column;
 }
+
+.frame{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+}
+.frame iframe{
+    width: 90%;
+    height: 100%;
+    border: 0.1em solid var(--main-color);
+    
+}
+
 #pbimg2{
     display: flex;
     flex: 1 1 1em;
@@ -318,12 +380,92 @@ i.redes{
     border: .1em white solid;
     border-radius: 10px;
 }
-#android{
-    width: 70%;
-}
 #fps1{
     width: 45%;
 }
 #fps2{
     width: 45%;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    .home {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 9em 5% 2em;
+        flex-direction: row-reverse;
+    }
+    #homephoto{
+        margin: 0 10%;
+    }
+    .home-content h3 {
+        text-align: left;
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .home-content h1 {
+        text-align: left;
+        font-size: 2.5em;
+    }
+    .redes-socias {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .redebutton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .lista{
+        display: flex;
+        flex-direction: row;
+    }
+    .lista-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;   
+        height: 20vh;
+    }
+    .services-container {
+        font-size: 0.9em;
+        display: flex;
+        gap: 1em;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .services-container .services-box {
+        display: flex;
+        height: 50vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .services-box:hover {
+        transform: scale(1.04);
+
+    }
+
+    .frame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: -5%;
+        
+        
+    
+    }
+    .frame iframe{
+        width: 70%;
+        height: 70%;
+        border: 0.1em solid var(--main-color);
+        
+    }
 }
