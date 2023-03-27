@@ -443,7 +443,6 @@ i.redes{
     }
     .services-container .services-box {
         display: flex;
-        height: 50vh;
         flex-direction: column;
         justify-content: center;
     }
